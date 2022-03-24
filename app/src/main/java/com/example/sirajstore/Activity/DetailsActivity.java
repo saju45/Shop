@@ -167,7 +167,7 @@ public class DetailsActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         switch (requestCode)
-        {
+        {//saju
             case 10:
                 if (resultCode==RESULT_OK && data!=null)
                 {
