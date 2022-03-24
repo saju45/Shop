@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">꧁•⊹٭𝚂𝚒𝚛𝚊𝚓 𝚂𝚝𝚘𝚛𝚎٭⊹•꧂</string>
+
+    <string-array name="godawn_test">
+        <item>প্রবেশ</item>
+        <item>বাহির</item>
+    </string-array>
+</resources>

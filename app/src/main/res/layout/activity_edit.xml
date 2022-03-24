@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroudsky"
+    tools:context=".Activity.EditActivity">
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:background="@drawable/text_bg"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" পণ্য আপডেট করুন "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputLayout1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginTop="15dp"
+        android:hint="পণ্যের নাম"
+        app:boxStrokeColor="@color/teal_200"
+        app:hintTextColor="@color/black"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputLayout4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginTop="15dp"
+        android:hint="পণ্যের পরিমাণ "
+        app:boxStrokeColor="@color/teal_200"
+        app:hintTextColor="@color/black"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textinputLayout1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:id="@+id/poriman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:layout_marginEnd="16sp"
+        android:hint="ক্রয় মূল্য"
+        app:boxStrokeColor="@color/teal_200"
+        app:hintTextColor="@color/black"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textinputLayout4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:id="@+id/kena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:layout_marginEnd="16sp"
+        android:hint="বিক্রয় মূল্য"
+        app:boxStrokeColor="@color/teal_200"
+        app:hintTextColor="@color/black"
+        android:layout_marginTop="8dp"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textinputLayout2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:id="@+id/sell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+       android:layout_marginStart="16sp"
+        android:layout_marginEnd="16sp"
+        android:background="@drawable/save_btn"
+        android:text="আপডেট"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textinputLayout3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/closeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/btn_bg"
+        android:text="ফিরে যান "
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saveButton" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="224dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/closeButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

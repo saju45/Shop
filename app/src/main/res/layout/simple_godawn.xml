@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    android:layout_margin="8dp"
+    android:elevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFF7">
+
+        <TextView
+            android:id="@+id/simple_productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/alike_angular"
+            android:text="Cocola 250 ml"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/update" />
+
+        <TextView
+            android:id="@+id/simple_productPoriman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="পরিমাণ = "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/simple_productName"
+            app:layout_constraintTop_toBottomOf="@id/simple_productName" />
+
+        <TextView
+            android:id="@+id/simple_poriman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textColor="#ff22"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/simple_productPoriman"
+            app:layout_constraintTop_toBottomOf="@id/simple_productName" />
+
+
+        <TextView
+            android:id="@+id/simple_productBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="ক্রয় মূল্য = "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/simple_productName"
+            app:layout_constraintTop_toBottomOf="@id/simple_productPoriman" />
+
+        <TextView
+            android:id="@+id/simple_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/simple_productBuy"
+            app:layout_constraintTop_toBottomOf="@id/simple_productPoriman" />
+
+
+        <TextView
+            android:id="@+id/simple_productSell"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=" মোট দাম = "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/simple_productName"
+            app:layout_constraintTop_toBottomOf="@id/simple_buy" />
+
+        <TextView
+            android:id="@+id/simple_sell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/simple_productSell"
+            app:layout_constraintTop_toBottomOf="@id/simple_productPoriman" />
+
+
+        <ImageView
+            android:id="@+id/delet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_delet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/simple_productSell" />
+
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toStartOf="@id/delet"
+            app:layout_constraintTop_toBottomOf="@id/simple_productSell" />
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:text="last update : "
+            android:textColor="#5AE8DB"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/updateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ff22"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/update"
+            app:layout_constraintStart_toEndOf="@id/update"
+            app:layout_constraintTop_toTopOf="@id/update" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
