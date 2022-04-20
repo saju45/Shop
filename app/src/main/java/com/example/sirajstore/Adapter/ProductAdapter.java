@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sirajstore.Activity.EditActivity;
+import com.example.sirajstore.Model.GoadawnModel;
 import com.example.sirajstore.Model.ProductModel;
 import com.example.sirajstore.R;
 import com.example.sirajstore.databinding.SimpleLayoutBinding;
@@ -48,7 +47,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.viewHold
 
         holder.binding.simpleProductName.setText(model.getName());
         holder.binding.simplePoriman.setText(model.getPoriman());
-        holder.binding.simpleBuy.setText(model.getBuy());
+        holder.binding.simpleGodownKroy.setText(model.getBuy());
         holder.binding.simpleSell.setText(model.getSell());
         holder.binding.updateTime.setText(model.getTime());
 

@@ -10,7 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.sirajstore.R;
+
 import com.example.sirajstore.databinding.ActivitySignInBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -35,7 +35,7 @@ public class SignInActivity extends AppCompatActivity {
         dialog.setTitle("Login Account");
         dialog.setMessage("Please wait...");
 
-        binding.singUpText.setOnClickListener(new View.OnClickListener() {
+        binding.gotoSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SignInActivity.this,SignUpActivity.class));
@@ -47,8 +47,8 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String email=binding.email.getText().toString();
-                String password=binding.password.getText().toString();
+                String email=binding.loginEmail.getText().toString();
+                String password=binding.loginPassword.getText().toString();
 
                 if (email.isEmpty()){
                     binding.email.setError("please enter your email");
@@ -73,6 +73,8 @@ public class SignInActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Login is successfully", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(SignInActivity.this,MainActivity.class));
                                 finish();
+                            }else {
+                                Toast.makeText(SignInActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

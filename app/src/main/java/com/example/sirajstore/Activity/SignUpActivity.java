@@ -42,7 +42,7 @@ public class SignUpActivity extends AppCompatActivity {
             auth=FirebaseAuth.getInstance();
             database=FirebaseDatabase.getInstance();
 
-            binding.LoginTExt.setOnClickListener(new View.OnClickListener() {
+            binding.gotoSignUpText.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(SignUpActivity.this,SignInActivity.class));
@@ -50,12 +50,12 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             });
 
-            binding.signUp.setOnClickListener(new View.OnClickListener() {
+            binding.singUp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                    String email=binding.email.getText().toString();
-                    String password=binding.password.getText().toString();
+                    String email=binding.loginEmail.getText().toString();
+                    String password=binding.loginPassword.getText().toString();
 
                     if (email.isEmpty()){
                         binding.email.setError("please enter your email");

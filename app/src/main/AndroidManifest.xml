@@ -13,6 +13,21 @@
         android:theme="@style/Theme.SirajStore"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Activity.GodownEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.LendanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.StatementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ItemInAcitivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.Godawn_detailsActivity"
             android:exported="false" />
         <activity
@@ -35,7 +50,7 @@
         </activity>
         <activity
             android:name=".Activity.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -2,18 +2,39 @@ package com.example.sirajstore.Model;
 
 public class GoadawnModel{
 
-    String name,poriman,pushId,time;
-    int buy;
-    int motdam;
+    String name,dhoron,pushId,time;
+    float kroymullo,motdam;
+    float poriman;
+    long timestamp;
 
     public GoadawnModel() {
     }
 
-    public GoadawnModel(String name, String poriman, int buy, int motdam) {
+    public GoadawnModel(String name, String dhoron, String pushId, String time, float kroymullo, float motdam, float poriman, long timestamp) {
         this.name = name;
-        this.poriman = poriman;
-        this.buy = buy;
+        this.dhoron = dhoron;
+        this.pushId = pushId;
+        this.time = time;
+        this.kroymullo = kroymullo;
         this.motdam = motdam;
+        this.poriman = poriman;
+        this.timestamp = timestamp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDhoron() {
+        return dhoron;
+    }
+
+    public void setDhoron(String dhoron) {
+        this.dhoron = dhoron;
     }
 
     public String getPushId() {
@@ -32,35 +53,35 @@ public class GoadawnModel{
         this.time = time;
     }
 
-    public String getName() {
-        return name;
+    public float getKroymullo() {
+        return kroymullo;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setKroymullo(float kroymullo) {
+        this.kroymullo = kroymullo;
     }
 
-    public String getPoriman() {
-        return poriman;
-    }
-
-    public void setPoriman(String poriman) {
-        this.poriman = poriman;
-    }
-
-    public int getBuy() {
-        return buy;
-    }
-
-    public void setBuy(int buy) {
-        this.buy = buy;
-    }
-
-    public int getMotdam() {
+    public float getMotdam() {
         return motdam;
     }
 
-    public void setMotdam(int motdam) {
+    public void setMotdam(float motdam) {
         this.motdam = motdam;
+    }
+
+    public float getPoriman() {
+        return poriman;
+    }
+
+    public void setPoriman(float poriman) {
+        this.poriman = poriman;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 }

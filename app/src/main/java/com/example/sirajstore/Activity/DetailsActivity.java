@@ -28,6 +28,7 @@ import com.example.sirajstore.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -80,18 +81,19 @@ public class DetailsActivity extends AppCompatActivity {
         adapter=new ProductAdapter(this,list);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        layoutManager.setReverseLayout(true);
+        layoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DetailsActivity.this, "You click", Toast.LENGTH_SHORT).show();
                 showDialog();
             }
         });
 
-       database.getReference().child("Product").addValueEventListener(new ValueEventListener() {
+       database.getReference().child("Product").child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
 
            @Override
            public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -167,7 +169,7 @@ public class DetailsActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         switch (requestCode)
-        {//saju
+        {
             case 10:
                 if (resultCode==RESULT_OK && data!=null)
                 {
@@ -205,7 +207,7 @@ public class DetailsActivity extends AppCompatActivity {
         builder.setView(view);
         builder.setCancelable(false);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
+      /*  saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String producname_=productName.getText().toString();
@@ -215,7 +217,7 @@ public class DetailsActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "productName : "+producname_, Toast.LENGTH_SHORT).show();
             }
         });
-
+*/
 
 
         AlertDialog alertDialog=builder.create();
@@ -269,7 +271,7 @@ public class DetailsActivity extends AppCompatActivity {
                     productModel.setPushId(postId);
                     productModel.setTime(time);
 
-                    reference.child(postId).setValue(productModel).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    reference.child(FirebaseAuth.getInstance().getUid()).child(postId).setValue(productModel).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
 

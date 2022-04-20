@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ItemInAcitivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:padding="10dp"
+                android:background="@drawable/text_bg"
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=" পণ্য সংযুক্ত করুন "
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputLayout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16sp"
+                android:layout_marginTop="15dp"
+                android:hint="পণ্যের নাম"
+                app:boxStrokeColor="@color/teal_200"
+                app:hintTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/productName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputLayout4"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16sp"
+                android:layout_marginTop="15dp"
+                android:hint="পণ্যের পরিমাণ "
+                app:boxStrokeColor="@color/teal_200"
+                app:hintTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textinputLayout1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/poriman"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputLayout2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16sp"
+                android:hint="পণ্যের ক্রয় মূল্য"
+                app:boxStrokeColor="@color/teal_200"
+                app:hintTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textinputLayout4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/kroy_mullo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputLayout7"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16sp"
+                android:hint="পণ্যের ক্রয় মূল্য"
+                app:boxStrokeColor="@color/teal_200"
+                app:hintTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textinputLayout2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/product_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputLayout3"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16sp"
+                android:hint="প্রবেশ"
+                app:boxStrokeColor="@color/teal_200"
+                app:hintTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textinputLayout7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/item_in"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputLayout5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16sp"
+                android:hint="পণ্যের পরিমাণ"
+                app:boxStrokeColor="@color/teal_200"
+                app:hintTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textinputLayout3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/mot_poriman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputLayout6"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16sp"
+                android:hint="মোট দাম"
+                app:boxStrokeColor="@color/teal_200"
+                app:hintTextColor="@color/black"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textinputLayout5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/motdam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Update"
+                android:id="@+id/update"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textinputLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

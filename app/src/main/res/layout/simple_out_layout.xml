@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:padding="10dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/time"
+            android:text="Update time"
+            android:textColor="#835615"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/text1"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="আপনার গোডাঊন থেকে "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Dardy "
+            android:padding="2dp"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            app:layout_constraintStart_toEndOf="@id/text1" />
+
+        <TextView
+            android:id="@+id/poriman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:padding="2dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            app:layout_constraintStart_toStartOf="@id/text1" />
+
+        <TextView
+            android:id="@+id/tye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Kathun"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:padding="2dp"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            app:layout_constraintStart_toEndOf="@id/poriman" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="বাহির করা হয়েছে ।"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:padding="2dp"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            app:layout_constraintStart_toEndOf="@id/tye" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

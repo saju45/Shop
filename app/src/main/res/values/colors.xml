@@ -9,4 +9,15 @@
     <color name="white">#FFFFFFFF</color>
     
     <color name="colorPurple">#4a148c</color>
+
+
+    <color name="toolbar_color">#FFAEF509</color>
+    <color name="nav_header">#FFEAA00C</color>
+    <color name="dashboard_color">#FF9B6309</color>
+    <color name="income_color">#FF240740</color>
+    <color name="expense_color">#FF6c042F</color>
+    <color name="date_color">#FF27064B</color>
+
+
+    <color name="expense_amount">#FFEC1D06</color>
 </resources>
